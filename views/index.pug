@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  hr
+  div.container
+    h3 Example Usage:
+    ul
+      li: a(href='api/2015-12-25') [project url]/api/2015-12-25
+      li: a(href='api/1451001600000') [project url]/api/1451001600000
+
+    h3 Example Output:
+    p: code {"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
+  
+  div.footer
+    p: a(href='https://www.freecodecamp.org/') freeCodeCamp.org
