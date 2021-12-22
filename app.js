@@ -3,10 +3,17 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 
+const compression = require('compression');
+const helmet = require('helmet');
+
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
 
 const app = express();
+
+// Deployment optimization and security
+app.use(compression());
+app.use(helmet());
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
